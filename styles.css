@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@100;200;400&display=swap');
+
+:root {
+    --clr-light-gray : hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    background: hsl(0, 0%, 95%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 56rem;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-block: 0.8rem;
+}
+
+.card {
+    padding: 3rem;
+}
+
+.left {
+    background: hsl(31, 77%, 52%);
+}
+
+.center {
+    background: hsl(184, 100%, 22%);
+}
+
+.right {
+    background: hsl(179, 100%, 13%);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    color: hsl(0, 0%, 95%);
+    font-size: 2.8em;
+    text-transform: uppercase;
+    margin-block: 2rem;
+}
+
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+    /* font-size: 1.05rem; */
+    font-size: 4.3vw;
+}
+
+button {
+    border: 2px solid hsl(0, 0%, 95%);
+    background: hsl(0, 0%, 95%);
+    padding-block: 1em;
+    border-radius: 2rem;
+    margin-top: 2em;
+    min-width: 12em;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: background 0.2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+.btn-1 {
+    color: hsl(31, 77%, 52%);
+}
+
+.btn-2 {
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-3 {
+    color: hsl(179, 100%, 13%);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    
+}
+.attribution a {
+    color: hsl(31, 77%, 52%); 
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        height: 500px;
+        width: 96%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .description {
+        font-size: 0.9em;
+        line-height: 1.7;
+        min-height: 200px;
+    }
+
+    button {
+        margin-top: 0;
+    }
+
+    footer {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 300px){
+    .card {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin-block: 1.5rem;
+    }
+
+    button {
+        padding-block: 0.8em;
+        min-width: 10em;
+    }
+
+    .description {
+        font-size: 4.3vw;
+    }
+}
