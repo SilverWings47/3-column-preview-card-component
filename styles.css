@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@100;200;400&display=swap');
-
-:root {
-    --clr-light-gray : hsl(0, 0%, 95%);
-}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -11,138 +7,103 @@
 }
 
 body {
-    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Lexend Deca', sans-serif;
-    background: hsl(0, 0%, 95%);
+    flex-direction: column;
+    min-height: 100vh;
+    background:url('images/bg-pattern-top.svg') right 180% bottom 250px no-repeat, url('images/bg-pattern-bottom.svg') left 180% top 250px no-repeat  hsl(185, 75%, 39%);
+    gap: 1rem;
+    overflow: hidden;
 }
 
-main {
+.container {
+    width: 21rem;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    max-width: 56rem;
     border-radius: 10px;
     overflow: hidden;
-    margin-block: 0.8rem;
+    position: relative;
 }
 
-.card {
-    padding: 3rem;
+.card-header {
+    flex-basis: 140px;
+    background: url('images/bg-pattern-card.svg');
 }
 
-.left {
-    background: hsl(31, 77%, 52%);
+.profile {
+    background: #fff;
 }
 
-.center {
-    background: hsl(184, 100%, 22%);
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    padding: 1.4rem;
 }
 
-.right {
-    background: hsl(179, 100%, 13%);
+.profile-img {
+    width: 30%;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-h1 {
-    font-family: 'Big Shoulders Display';
-    color: hsl(0, 0%, 95%);
-    font-size: 2.8em;
-    text-transform: uppercase;
-    margin-block: 2rem;
-}
-
-.description {
-    color: hsla(0, 0%, 100%, 0.75);
-    line-height: 1.8;
-    /* font-size: 1.05rem; */
-    font-size: 4.3vw;
-}
-
-button {
-    border: 2px solid hsl(0, 0%, 95%);
-    background: hsl(0, 0%, 95%);
-    padding-block: 1em;
-    border-radius: 2rem;
-    margin-top: 2em;
-    min-width: 12em;
-    font-family: 'Lexend Deca', sans-serif;
-    transition: background 0.2s ease-in;
-    cursor: pointer;
-}
-
-button:hover {
-    background: transparent;
-    color: hsl(0, 0%, 95%);
-}
-
-.btn-1 {
-    color: hsl(31, 77%, 52%);
-}
-
-.btn-2 {
-    color: hsl(184, 100%, 22%);
-}
-
-.btn-3 {
-    color: hsl(179, 100%, 13%);
-}
-
-.attribution { 
-    font-size: 11px;
+.profile-info {
     text-align: center;
-    color: #000;
-    
+    padding: 4rem 0 2rem 0;
 }
+
+.profile-name {
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.125rem;
+}
+
+.profile-age {
+    color: hsl(0, 0%, 59%);
+    font-size: 1.1rem;
+    margin-left: 0.4rem;
+}
+
+.profile-city {
+    font-size: 0.9rem;
+    line-height: 0.8;
+    color: hsl(229, 23%, 23%);
+}
+
+.profile-info span:nth-of-type(3)  {
+    display: block;
+    color: hsl(0, 0%, 59%);
+    margin-top: 0.7rem;
+}
+
+.profile-stats__number {
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    font-size: 1.125rem;
+}
+
+.profile-stats__title {
+    color: hsl(229, 23%, 23%);
+    font-size: 0.650rem;
+    letter-spacing: 1px;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.attribution { font-size: 11px; text-align: center; }
 .attribution a {
-    color: hsl(31, 77%, 52%); 
+    color: #fff; 
     text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-    main {
-        flex-direction: row;
-        height: 500px;
-        width: 96%;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-
-    .description {
-        font-size: 0.9em;
-        line-height: 1.7;
-        min-height: 200px;
-    }
-
-    button {
-        margin-top: 0;
-    }
-
-    footer {
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 300px){
-    .card {
-        padding: 2rem;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        margin-block: 1.5rem;
-    }
-
-    button {
-        padding-block: 0.8em;
-        min-width: 10em;
-    }
-
-    .description {
-        font-size: 4.3vw;
-    }
 }
